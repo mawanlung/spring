@@ -5,13 +5,13 @@ pipeline {
             args '-p 3000:3000' 
         }
     }
-    stages {
-        stage('Build') { 
-            steps {
-                sh 'npm run build'
-                sh 'npm start'
-                sh 'npm install -g serve'
-            }
-        }
-    }
+//    stages {
+//        stage('Build') { 
+//            steps {
+//                sh 'npm run build'
+//                sh 'npm start'
+//                sh 'npm install -g serve'
+//            }
+//        }
+//    }
 }
