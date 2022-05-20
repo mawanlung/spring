@@ -3,7 +3,7 @@ pipeline {
     agent none
    stages {     
     stage('Maven Install') {
-      agent any
+      echo 'Hello'
   }       
   steps {
        sh 'docker ps'
