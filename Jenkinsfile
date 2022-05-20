@@ -1,16 +1,15 @@
-#!groovy
 pipeline {
-    agent none
-   stages {     
-    stage('Maven Install') {
-      agent {         
-       docker {          
-         image 'maven:3.5.0'         
-     }       
-  }       
-  steps {
-       echo 'Hello'
-       }
-     }
-   }
- }
+    agent {
+        docker {
+            image 'node:6-alpine' 
+            args '-p 3000:3000' 
+        }
+    }
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'npm install' 
+            }
+        }
+    }
+}
