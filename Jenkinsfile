@@ -8,7 +8,6 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'exit'
                 sh 'npm install -g serve'
             }
         }
